@@ -1,0 +1,25 @@
+:root {
+  --ink: #2b2118;
+  --paper: #fffdf5;
+  --panel: #f5ecd5;
+  --accent: #a34f1d;
+  --accent-strong: #6f3210;
+  --cheese: #f0c84b;
+  --muted: #6c6258;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+  --border-width: 1px;
+  --rule-width: 4px;
+  --border-style: solid;
+  --border: var(--border-width) var(--border-style) var(--ink);
+  --rule: var(--rule-width) var(--border-style) var(--accent);
+  --radius: 0.5rem;
+  --text-s: 0.875rem;
+  --text-m: 1rem;
+  --text-l: 1.5rem;
+  --text-xl: 2.25rem;
+  --measure: 68ch;
+  --page-width: 78rem;
+}

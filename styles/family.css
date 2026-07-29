@@ -1,0 +1,97 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  min-block-size: 100svh;
+}
+
+body > header {
+  grid-area: header;
+}
+
+body > nav {
+  grid-area: nav;
+  text-align: center;
+}
+
+body > main {
+  grid-area: main;
+  inline-size: 100%;
+  max-inline-size: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+body > footer {
+  grid-area: footer;
+}
+
+.family-hero {
+  display: block;
+  inline-size: min(100%, 30rem);
+  block-size: auto;
+  margin: 0 auto var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.guide-fresh-image {
+  view-transition-name: fresh-cheese;
+}
+
+.guide-soft-image {
+  view-transition-name: soft-cheese;
+}
+
+.guide-blue-image {
+  view-transition-name: blue-cheese;
+}
+
+.guide-hard-image {
+  view-transition-name: hard-cheese;
+}
+
+.lede {
+  padding: var(--space-2);
+  border-inline-start: var(--rule);
+  background: var(--panel);
+  font-size: 1.1rem;
+}
+
+body > main section {
+  margin-block-start: var(--space-3);
+}
+
+.family-pagination {
+  margin-block-start: var(--space-4);
+  padding-block-start: var(--space-2);
+  border-block-start: var(--border);
+}
+
+.family-pagination ul {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.family-pagination a {
+  font-weight: 700;
+}
+
+@media (max-width: 40rem) {
+  body > main {
+    padding: var(--space-2);
+  }
+
+  .family-pagination ul {
+    flex-direction: column;
+  }
+}

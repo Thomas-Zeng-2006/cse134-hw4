@@ -1,0 +1,70 @@
+@layer reset, base;
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  figure,
+  blockquote {
+    margin: 0;
+  }
+}
+
+@layer base {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: var(--text-m);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-block: 0 var(--space-2);
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-size: var(--text-xl);
+  }
+
+  h2 {
+    font-size: var(--text-l);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-block: 0 var(--space-2);
+  }
+
+  a {
+    color: var(--accent-strong);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.12rem;
+    text-underline-offset: 0.18rem;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  button,
+  input,
+  select {
+    color: inherit;
+    font: inherit;
+  }
+
+  small,
+  figcaption {
+    color: var(--muted);
+    font-size: var(--text-s);
+  }
+}

@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100svh;
+}
+
+body > main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+.not-found-card {
+  max-inline-size: 32rem;
+  padding: var(--space-3);
+  border: var(--border);
+  border-block-start: var(--rule);
+  border-radius: var(--radius);
+  background: var(--panel);
+  text-align: center;
+}
+
+.not-found-card img {
+  display: block;
+  inline-size: min(100%, 20rem);
+  block-size: auto;
+  margin-inline: auto;
+  margin-block-end: var(--space-2);
+}
+
+.not-found-card a {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--paper);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.not-found-card a:hover {
+  background: var(--accent-strong);
+  color: var(--paper);
+}
+
+@media (max-width: 40rem) {
+  body > main,
+  .not-found-card {
+    padding: var(--space-2);
+  }
+}

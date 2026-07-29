@@ -1,0 +1,67 @@
+body > main {
+  max-inline-size: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+body > main h1 {
+  padding-block-end: var(--space-1);
+  border-block-end: var(--rule);
+}
+
+.society-mark {
+  float: left;
+  inline-size: 12rem;
+  margin: 0 var(--space-2) var(--space-1) 0;
+  padding: var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.society-mark img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.board {
+  clear: both;
+  padding-block-start: var(--space-3);
+}
+
+details {
+  margin-block: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+summary {
+  color: var(--accent-strong);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+details p {
+  margin-block-start: var(--space-2);
+}
+
+.meetings {
+  margin-block-start: var(--space-3);
+  padding: var(--space-2);
+  border-inline-start: var(--rule);
+}
+
+@media (max-width: 32rem) {
+  body > main {
+    padding: var(--space-2);
+  }
+
+  .society-mark {
+    float: none;
+    inline-size: min(100%, 14rem);
+    margin: 0 auto var(--space-2);
+  }
+}

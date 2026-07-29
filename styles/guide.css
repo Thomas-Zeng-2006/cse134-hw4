@@ -1,0 +1,106 @@
+body > main {
+  max-inline-size: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+body > main h1 {
+  padding-block-end: var(--space-1);
+  border-block-end: var(--rule);
+}
+
+.byline {
+  color: var(--muted);
+  font-size: var(--text-s);
+}
+
+.family-entry {
+  margin-block: var(--space-3);
+  padding-block-end: var(--space-2);
+  border-block-end: var(--border);
+}
+
+.family-entry > a {
+  display: block;
+  text-decoration: none;
+}
+
+.family-entry img {
+  display: block;
+  inline-size: min(100%, 22rem);
+  block-size: auto;
+  margin-block: var(--space-1);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.guide-fresh-image {
+  view-transition-name: fresh-cheese;
+}
+
+.guide-soft-image {
+  view-transition-name: soft-cheese;
+}
+
+.guide-blue-image {
+  view-transition-name: blue-cheese;
+}
+
+.guide-hard-image {
+  view-transition-name: hard-cheese;
+}
+
+blockquote {
+  margin-block: var(--space-2);
+  padding: var(--space-2);
+  border-inline-start: var(--rule);
+  background: var(--panel);
+}
+
+fieldset {
+  margin-block: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+fieldset label {
+  display: block;
+  margin-block: var(--space-1);
+}
+
+form > label {
+  display: block;
+  margin-block-end: var(--space-1);
+  font-weight: 700;
+}
+
+input[type="text"] {
+  inline-size: 100%;
+  max-inline-size: 28rem;
+  padding: var(--space-1);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+form button {
+  margin-block-start: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--accent-strong);
+}
+
+@media (max-width: 40rem) {
+  body > main {
+    padding: var(--space-2);
+  }
+}

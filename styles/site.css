@@ -1,0 +1,80 @@
+body > header {
+  padding: var(--space-2) var(--space-3);
+  border-block-end: var(--rule);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+body > header img {
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  vertical-align: middle;
+}
+
+body > header p {
+  display: inline;
+  margin-inline-start: var(--space-1);
+  font-size: var(--text-l);
+  font-weight: 700;
+}
+
+body > header a {
+  color: var(--paper);
+  text-decoration: none;
+}
+
+body > nav {
+  padding: var(--space-1) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--panel);
+}
+
+body > nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body > nav li {
+  display: inline;
+}
+
+body > nav li + li::before {
+  content: " · ";
+  color: var(--muted);
+}
+
+body > nav a {
+  padding-block: var(--space-1);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body > nav a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 0.18rem;
+  text-underline-offset: 0.25rem;
+}
+
+body > footer {
+  padding: var(--space-2) var(--space-3);
+  border-block-start: var(--border);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+body > footer p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: var(--rule);
+  outline-offset: 0.2rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}

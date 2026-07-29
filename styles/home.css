@@ -1,0 +1,162 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 11rem minmax(0, 1fr) 17rem;
+  grid-template-rows: auto 1fr auto;
+  min-block-size: 100svh;
+}
+
+body > header {
+  grid-area: header;
+}
+
+body > nav {
+  grid-area: nav;
+  padding: var(--space-2);
+  border-inline-end: var(--border);
+  border-block-end: 0;
+}
+
+body > nav li {
+  display: block;
+  margin-block-end: var(--space-1);
+}
+
+body > nav li + li::before {
+  content: none;
+}
+
+body > nav a {
+  display: block;
+  padding: var(--space-1);
+  border-inline-start: var(--rule-width) solid transparent;
+}
+
+body > nav a:hover,
+body > nav a[aria-current="page"] {
+  border-inline-start-color: var(--accent);
+}
+
+body > main {
+  grid-area: main;
+  inline-size: 100%;
+  max-inline-size: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+body > main h1 {
+  padding-block-end: var(--space-1);
+  border-block-end: var(--rule);
+}
+
+.call-to-action a {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--paper);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.call-to-action a:hover {
+  background: var(--accent-strong);
+  color: var(--paper);
+}
+
+body > aside {
+  grid-area: aside;
+  padding: var(--space-2);
+  border-inline-start: var(--border);
+  background: var(--panel);
+}
+
+body > aside img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  margin-block-end: var(--space-1);
+}
+
+body > aside section:first-child {
+  margin-block-end: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+body > aside > button,
+[popover] button {
+  padding: var(--space-1) var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+body > aside > button:hover,
+[popover] button:hover {
+  background: var(--accent-strong);
+}
+
+[popover] {
+  max-inline-size: 28rem;
+  padding: var(--space-3);
+  border: var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+[popover]::backdrop {
+  background: rgb(43 33 24 / 45%);
+}
+
+body > footer {
+  grid-area: footer;
+}
+
+@media (max-width: 40rem) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr auto auto;
+  }
+
+  body > nav,
+  body > aside {
+    border-inline: 0;
+    border-block-end: var(--border);
+  }
+
+  body > nav li {
+    display: inline;
+    margin: 0;
+  }
+
+  body > nav li + li::before {
+    content: " · ";
+  }
+
+  body > nav a {
+    display: inline;
+    padding: 0;
+    border: 0;
+  }
+
+  body > main {
+    padding: var(--space-2);
+  }
+}

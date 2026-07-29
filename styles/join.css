@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100svh;
+}
+
+body > main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+.membership-card {
+  inline-size: min(100%, 40rem);
+  padding: var(--space-3);
+  border: var(--border);
+  border-block-start: var(--rule);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+form {
+  margin-block-start: var(--space-3);
+}
+
+form > label {
+  display: block;
+  margin-block-start: var(--space-2);
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  inline-size: 100%;
+  margin-block-start: var(--space-1);
+  padding: var(--space-1);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+fieldset {
+  margin-block: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+fieldset label {
+  display: block;
+  margin-block: var(--space-1);
+}
+
+form button,
+.membership-card > button,
+dialog button {
+  padding: var(--space-1) var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+form button:hover,
+.membership-card > button:hover,
+dialog button:hover {
+  background: var(--accent-strong);
+}
+
+.membership-card > button {
+  margin-block-start: var(--space-2);
+}
+
+dialog {
+  max-inline-size: 34rem;
+  padding: var(--space-3);
+  border: var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+dialog::backdrop {
+  background: rgb(43 33 24 / 45%);
+}
+
+@media (max-width: 40rem) {
+  body > main {
+    align-items: flex-start;
+    padding: var(--space-2);
+  }
+
+  .membership-card {
+    padding: var(--space-2);
+  }
+}
